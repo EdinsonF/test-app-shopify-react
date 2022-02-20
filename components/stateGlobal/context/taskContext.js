@@ -4,7 +4,7 @@ import { type } from '../types/type';
 
 export const TaskContext = createContext();
 
-const { eventIncreseam } = type;
+const { eventIncreseam, eventDecreseam } = type;
 
 export const useTask = () => {
   const context = useContext(TaskContext);
@@ -24,9 +24,14 @@ const TaskProvider = ({ children }) => {
 
   /* function dispacher */
   const increseamFn = () => {
-    console.log("llega");
     dispatch({
       type : eventIncreseam
+    })
+  }
+
+  const decreseamFn = () => {
+    dispatch({
+      type : eventDecreseam
     })
   }
 
@@ -35,7 +40,8 @@ const TaskProvider = ({ children }) => {
     
       value={{
         test : state.test,
-        increseamFn
+        increseamFn,
+        decreseamFn
       }}
     >
 

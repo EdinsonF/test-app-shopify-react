@@ -15,7 +15,7 @@ const Test = () => {
     <>
     
       <div>this is my test component</div>
-      {/*  */}<Link href="/new"><a> ir a otra pagina</a></Link>
+      <Link href="/new"><a> ir a otra pagina</a></Link>
       <button type="button" onClick={ increseamFn }>{ test }</button>
     </>
 

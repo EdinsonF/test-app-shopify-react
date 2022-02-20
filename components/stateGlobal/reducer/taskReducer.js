@@ -1,7 +1,8 @@
 import React from 'react'
 import { type } from '../types/type';
 
-const { eventIncreseam } = type;
+const { eventIncreseam, eventDecreseam } = type;
+
 
 const taskReducer = (state , action) => {
 
@@ -16,13 +17,7 @@ const taskReducer = (state , action) => {
     case eventDecreseam :
       return {
         ...state,
-        contador: state.contador-1
-      }
-
-    case sendText:  
-      return {
-        ...state,
-        nombre : action.payload
+        test: state.test-1
       }
 
     default:
